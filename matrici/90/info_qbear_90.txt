@@ -1,0 +1,2 @@
+Expected_score:	-0.409641122119
+Entropy:	1.26139854936
