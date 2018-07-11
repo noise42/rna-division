@@ -22,3 +22,7 @@ for ix, bearchar_i in enumerate(bearstring):
 
 ###TODO save or print the matrix in beagle way
 print(alphabearsub)
+with open('convertedMatrix','w') as f:
+	for row in alphabearsub:
+		for value in row:
+			f.write(value)
