@@ -1,1 +1,9 @@
-questo.ignore
+#qua mettici tutti i path delle cose che non devono finire caricate
+#possono essere cartelle (<folder>)
+#cose dentro alle cartelle (<folder/*>)
+#nomi di file specifici con il path relativo a dove hai fatto il git init 
+#basta che aggiungi righe qua sotto
+
+esempio/*
+esempio2/filespecifico.tsv
+cartella_da_ignorare
