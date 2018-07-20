@@ -20,7 +20,7 @@ do
 		tmp=${bench##*/}
 		tmp2=${tmp%%_*}
 		###Bonus
-		for BONUS in $(seq 0 0.1 8)
+		for BONUS in $(seq 0 0.1 10)
 		do
 			BONUSLABEL=${BONUS/./}
 			OUT=out/${EXT}_${tmp2}_${BONUSLABEL}.out
@@ -30,6 +30,7 @@ do
 			if [ ! -f $OUT ]
 			then
 
+				echo java -jar AMBeR.jar -p -m $MATRIX -b $BONUS -input1 $SET1 -input2 $SET2 -outfile $OUT 
 				java -jar AMBeR.jar -p -m $MATRIX -b $BONUS -input1 $SET1 -input2 $SET2 -outfile $OUT 
 
 				duration=$SECONDS
