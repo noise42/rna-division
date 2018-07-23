@@ -27,3 +27,4 @@ PSSM_distance/rfam_PSSM_dic_qbear_50.pickle
 PSSM_distance/rfam_PSSM_qbear_50.pickle
 PSSM_distance/coppie.txt
 beagleUser/out
+beagleUser/results_DF_last.pkl
