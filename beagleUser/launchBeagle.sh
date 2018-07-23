@@ -20,10 +20,10 @@ do
 		tmp=${bench##*/}
 		tmp2=${tmp%%_*}
 		###Bonus
-		for BONUS in $(seq 0 0.1 10)
+		for BONUS in $(seq 0.0 0.1 10.0)
 		do
 			BONUSLABEL=${BONUS/./}
-			OUT=out/${EXT}_${tmp2}_${BONUSLABEL}.out
+			OUT=out/${EXT}_${tmp2}_${BONUS}.out
 			SECONDS=0
 
 			#do the work only if the file is not already there!!!
@@ -34,7 +34,8 @@ do
 				java -jar AMBeR.jar -p -m $MATRIX -b $BONUS -input1 $SET1 -input2 $SET2 -outfile $OUT 
 
 				duration=$SECONDS
-				echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed for a complete cycle (total of 80bonus * 4datasets cycles))."
+				echo $BONUS
+				#echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed for a complete cycle (total of 80bonus * 4datasets cycles))."
 			fi
 		done
 	done
